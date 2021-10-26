@@ -38,5 +38,16 @@ namespace psw_po_lab3
         {
             return dishVolume * alcoholPercentage * 0.01 * dishesCount;
         }
+
+        public static double Clamp(double min, double max, double value)
+        {
+            if (value < min)
+                return min;
+
+            if (value > max)
+                return max;
+
+            return value;
+        }
     }
 }

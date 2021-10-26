@@ -21,15 +21,7 @@ namespace psw_po_lab3
         public double Value
         {
             get => value;
-            private set
-            {
-                if (value > 100)
-                    this.value = 100;
-                else if (value < 0)
-                    this.value = 0;
-                else
-                    this.value = value;
-            }
+            private set => this.value = Calculator.Clamp(0, 100, value);
         }
 
         public Preset(string name, double value)
