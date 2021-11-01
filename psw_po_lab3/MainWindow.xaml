@@ -67,7 +67,7 @@
                   FontFamily="Century Gothic" FontSize="18"
                   BorderBrush="#FF01796F" Foreground="#FF01796F">
 
-            <Canvas Margin="14,66,14,73">
+            <Canvas Margin="14,56,14,83">
                 <TextBlock Text="dishes"
                            HorizontalAlignment="Left" VerticalAlignment="Top"
                            Canvas.Left="88"
@@ -107,7 +107,7 @@
                   FontFamily="Century Gothic" FontSize="18"
                   BorderBrush="#FFFF5F1F" Foreground="#FFFF5F1F">
             
-            <Canvas Margin="61,25,61,26">
+            <Canvas Margin="46,25,51,26">
                 <TextBlock Text="TOTAL VOLUME:"
                            HorizontalAlignment="Left" VerticalAlignment="Top"
                            FontFamily="Century Gothic" FontSize="16" FontWeight="Bold" 
@@ -136,7 +136,7 @@
                         Content="Calculate"
                         Width="130" Height="55"
                         HorizontalAlignment="Left" VerticalAlignment="Top"
-                        Canvas.Left="243"
+                        Canvas.Left="268"
                         Click="bt_calculate_Click"
                         Cursor="Hand"
                         Style="{DynamicResource RoundCorner_Calculate}"
@@ -161,7 +161,7 @@
         <Button x:Name="bt_clearAll"
                 Content="Clear all"
                 Width="85" Height="30"
-                Margin="10,520,0,0"
+                Margin="15,515,0,0"
                 HorizontalAlignment="Left" VerticalAlignment="Top"
                 Click="bt_clearAll_Click"
                 Cursor="Hand"
