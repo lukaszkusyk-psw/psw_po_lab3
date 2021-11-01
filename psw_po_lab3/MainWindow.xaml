@@ -78,6 +78,7 @@
                           Width="210" Height="25"
                           HorizontalAlignment="Left" VerticalAlignment="Top"
                           Canvas.Top="21"
+                          SelectionChanged="DishSelectionChanged"
                           IsReadOnly="True"
                           FontFamily="Gothic" FontSize="16"
                           BorderBrush="#FFE3E9EF" Background="White" Foreground="#FF016159"/>
@@ -92,6 +93,7 @@
                           Width="210" Height="25"
                           HorizontalAlignment="Left" VerticalAlignment="Top"
                           Canvas.Top="92"
+                          SelectionChanged="AlcoholSelectionChanged"
                           IsReadOnly="True"
                           FontFamily="Gothic" FontSize="16"
                           BorderBrush="#FFE3E9EF" Background="White" Foreground="#FF016159"/>

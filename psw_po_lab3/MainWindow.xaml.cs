@@ -35,6 +35,18 @@ namespace psw_po_lab3
             }
         }
 
+        private void DishSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (list_dishPresets.SelectedIndex != -1)
+                tb_dishSize.Text = Calculator.DishPresets[list_dishPresets.SelectedIndex].Value.ToString();
+        }
+
+        private void AlcoholSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (list_typesPresets.SelectedIndex != -1)
+                tb_alcoholPercentage.Text = Calculator.TypesPresets[list_typesPresets.SelectedIndex].Value.ToString();
+        }
+
         private void bt_calculate_Click(object sender, RoutedEventArgs e)
         {
             double dishSize = string.IsNullOrEmpty(tb_dishSize.Text) ? 0 : Convert.ToDouble(tb_dishSize.Text);
