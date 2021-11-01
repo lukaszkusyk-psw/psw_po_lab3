@@ -29,7 +29,7 @@ namespace psw_po_lab3
             new Preset("Grain Alcohol (95%)", 95),
         };
 
-        public static double TotalVolume(double dishVolume, int dishesCount)
+        public static double TotalVolume(double dishVolume, uint dishesCount)
         {
             return dishVolume * dishesCount;
         }
