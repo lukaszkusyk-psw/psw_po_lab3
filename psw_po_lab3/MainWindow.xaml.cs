@@ -41,6 +41,16 @@ namespace psw_po_lab3
             result_AlcoholVolume.Text = Calculator.AlcoholVolume(Convert.ToDouble(tb_dishSize.Text), Convert.ToDouble(tb_alcoholPercentage.Text), Convert.ToUInt32(tb_quantity.Text)).ToString();
         }
 
+        private void bt_clearAll_Click(object sender, RoutedEventArgs e)
+        {
+            tb_dishSize.Clear();
+            tb_alcoholPercentage.Clear();
+            tb_quantity.Clear();
+
+            result_TotalVolume.Text = "";
+            result_AlcoholVolume.Text = "";
+        }
+
         private void PreviewValidation(object sender, TextCompositionEventArgs e)
         {
             Validation.DoubleValidation(e);
@@ -50,7 +60,5 @@ namespace psw_po_lab3
         {
             Validation.UintValidation(e);
         }
-
-        
     }
 }
