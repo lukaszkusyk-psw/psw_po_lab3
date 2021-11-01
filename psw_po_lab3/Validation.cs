@@ -7,7 +7,7 @@ namespace psw_po_lab3
     {
         public static void DoubleValidation(TextCompositionEventArgs e)
         {
-            Regex regex = new Regex("[^0-9|.]");
+            Regex regex = new Regex("[^0-9|,]");
             e.Handled = regex.IsMatch(e.Text);
         }
 
