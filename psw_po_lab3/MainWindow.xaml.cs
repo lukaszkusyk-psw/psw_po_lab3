@@ -34,5 +34,15 @@ namespace psw_po_lab3
                 list_typesPresets.Items.Add(Calculator.TypesPresets[i].Name);
             }
         }
+
+        private void PreviewValidation(object sender, TextCompositionEventArgs e)
+        {
+            Validation.DoubleValidation(e);
+        }
+
+        private void QuantityValidation(object sender, TextCompositionEventArgs e)
+        {
+            Validation.UintValidation(e);
+        }
     }
 }

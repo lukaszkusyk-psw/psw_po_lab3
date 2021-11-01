@@ -10,11 +10,11 @@
         <GroupBox Header="Enter values yourself" HorizontalAlignment="Left" Height="285" Margin="55,30,0,0" VerticalAlignment="Top" Width="210" FontFamily="Century Gothic" FontSize="18" BorderBrush="#FF4040FF" Foreground="#FF4040FF">
             <Canvas Margin="35,35,43,35">
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="dish size" VerticalAlignment="Top" FontSize="13" FontFamily="Gothic" FontStyle="Italic" Canvas.Left="36" Foreground="#FF120A8F"/>
-                <TextBox x:Name="tb_dishSize" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Gothic" FontSize="16" Canvas.Top="21" Foreground="#FF120A8F"/>
+                <TextBox x:Name="tb_dishSize" PreviewTextInput="PreviewValidation" MaxLength="5" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Gothic" FontSize="16" Canvas.Top="21" Foreground="#FF120A8F"/>
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="alcohol percentage" VerticalAlignment="Top" FontSize="13" FontFamily="Gothic" FontStyle="Italic" Canvas.Left="7" Canvas.Top="70" Foreground="#FF120A8F"/>
-                <TextBox x:Name="tb_alcoholPercentage_" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Gothic" FontSize="16" Canvas.Top="91" Foreground="#FF120A8F"/>
+                <TextBox x:Name="tb_alcoholPercentage_" PreviewTextInput="PreviewValidation" MaxLength="5" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Gothic" FontSize="16" Canvas.Top="91" Foreground="#FF120A8F"/>
                 <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="quantity" VerticalAlignment="Top" FontSize="13" FontFamily="Gothic" FontStyle="Italic" Canvas.Left="37" Canvas.Top="140" Foreground="#FF120A8F"/>
-                <TextBox x:Name="tb_quantity" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Gothic" FontSize="16" Canvas.Top="161" Foreground="#FF120A8F"/>
+                <TextBox x:Name="tb_quantity" PreviewTextInput="QuantityValidation" MaxLength="5" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Gothic" FontSize="16" Canvas.Top="161" Foreground="#FF120A8F"/>
 
             </Canvas>
         </GroupBox>
