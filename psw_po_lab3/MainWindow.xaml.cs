@@ -23,6 +23,16 @@ namespace psw_po_lab3
         public MainWindow()
         {
             InitializeComponent();
+
+            for (int i = 0; i < Calculator.DishPresets.Count; i++)
+            {
+                list_dishPresets.Items.Add(Calculator.DishPresets[i].Name);
+            }
+
+            for (int i = 0; i < Calculator.DishPresets.Count; i++)
+            {
+                list_typesPresets.Items.Add(Calculator.TypesPresets[i].Name);
+            }
         }
     }
 }
