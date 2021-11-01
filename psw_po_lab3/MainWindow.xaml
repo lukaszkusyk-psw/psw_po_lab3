@@ -5,33 +5,142 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:psw_po_lab3"
         mc:Ignorable="d"
-        Title="The Percentage Calculator" Height="600" Width="630" ResizeMode="NoResize" Background="#FFF7F6F3">
+        Title="The Percentage Calculator" Width="630" Height="600" ResizeMode="NoResize" Background="#FFF7F6F3">
+
     <Grid>
-        <GroupBox Header="Enter values yourself" HorizontalAlignment="Left" Height="285" Margin="55,30,0,0" VerticalAlignment="Top" Width="210" FontFamily="Century Gothic" FontSize="18" BorderBrush="#FF4040FF" Foreground="#FF4040FF">
+        <GroupBox Header="Enter values yourself"
+            Width="210" Height="285"
+            Margin="55,30,0,0"
+            HorizontalAlignment="Left" VerticalAlignment="Top"
+            FontFamily="Century Gothic" FontSize="18"
+            BorderBrush="#FF4040FF" Foreground="#FF4040FF">
+
             <Canvas Margin="35,35,43,35">
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="dish size" VerticalAlignment="Top" FontSize="13" FontFamily="Gothic" FontStyle="Italic" Canvas.Left="36" Foreground="#FF120A8F"/>
-                <TextBox x:Name="tb_dishSize" PreviewTextInput="PreviewValidation" MaxLength="5" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Gothic" FontSize="16" Canvas.Top="21" Foreground="#FF120A8F"/>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="alcohol percentage" VerticalAlignment="Top" FontSize="13" FontFamily="Gothic" FontStyle="Italic" Canvas.Left="7" Canvas.Top="70" Foreground="#FF120A8F"/>
-                <TextBox x:Name="tb_alcoholPercentage_" PreviewTextInput="PreviewValidation" MaxLength="5" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Gothic" FontSize="16" Canvas.Top="91" Foreground="#FF120A8F"/>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="quantity" VerticalAlignment="Top" FontSize="13" FontFamily="Gothic" FontStyle="Italic" Canvas.Left="37" Canvas.Top="140" Foreground="#FF120A8F"/>
-                <TextBox x:Name="tb_quantity" PreviewTextInput="QuantityValidation" MaxLength="5" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Gothic" FontSize="16" Canvas.Top="161" Foreground="#FF120A8F"/>
+                <TextBlock Text="dish volume"
+                           HorizontalAlignment="Left" VerticalAlignment="Top"
+                           Canvas.Left="26"
+                           FontFamily="Gothic" FontSize="13" FontStyle="Italic"
+                           Foreground="#FF120A8F"/>
 
+                <TextBox x:Name="tb_dishSize"
+                         Width="120" Height="25"
+                         HorizontalAlignment="Left" VerticalAlignment="Top"
+                         Canvas.Top="21"
+                         PreviewTextInput="PreviewValidation" MaxLength="5"
+                         FontFamily="Gothic" FontSize="16"
+                         Foreground="#FF120A8F"/>
+
+                <TextBlock Text="alcohol percentage"
+                           HorizontalAlignment="Left" VerticalAlignment="Top"
+                           Canvas.Left="7" Canvas.Top="70"
+                           FontFamily="Gothic" FontSize="13" FontStyle="Italic"
+                           Foreground="#FF120A8F"/>
+
+                <TextBox x:Name="tb_alcoholPercentage"
+                         Width="120" Height="25"
+                         HorizontalAlignment="Left" VerticalAlignment="Top"
+                         Canvas.Top="91"
+                         PreviewTextInput="PreviewValidation" MaxLength="5"
+                         FontFamily="Gothic" FontSize="16"
+                         Foreground="#FF120A8F"/>
+
+                <TextBlock Text="quantity"
+                           HorizontalAlignment="Left" VerticalAlignment="Top"
+                           Canvas.Left="36" Canvas.Top="140"
+                           FontFamily="Gothic" FontSize="13" FontStyle="Italic"
+                           Foreground="#FF120A8F"/>
+
+                <TextBox x:Name="tb_quantity" 
+                         Width="120" Height="25"
+                         HorizontalAlignment="Left" VerticalAlignment="Top"
+                         Canvas.Top="161"
+                         PreviewTextInput="QuantityValidation" MaxLength="5"
+                         FontFamily="Gothic" FontSize="16"
+                         Foreground="#FF120A8F"/>
             </Canvas>
         </GroupBox>
-        <GroupBox Header="Or choose from the lists" HorizontalAlignment="Left" Height="285" Margin="312,30,0,0" VerticalAlignment="Top" Width="250" FontFamily="Century Gothic" FontSize="18" BorderBrush="#FF01796F" Foreground="#FF01796F">
-            <Canvas Margin="18,73,19,78">
-                <ComboBox x:Name="list_dishPresets" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Background="White" BorderBrush="#FFE3E9EF" Height="25" FontSize="16" FontFamily="Gothic" Margin="0,0,20,0" IsEditable="True" Text="dishes" IsReadOnly="True" Foreground="#FF016159"/>
-                <ComboBox x:Name="list_typesPresets" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Background="White" BorderBrush="#FFE3E9EF" Height="25" FontSize="16" FontFamily="Gothic" Canvas.Top="80" Margin="0,0,20,0" IsEditable="True" IsReadOnly="True" Text="types" Foreground="#FF016159"/>
 
+        <GroupBox Header="Or choose from the lists"
+                  Width="250" Height="285"
+                  Margin="312,30,0,0"
+                  HorizontalAlignment="Left" VerticalAlignment="Top"
+                  FontFamily="Century Gothic" FontSize="18"
+                  BorderBrush="#FF01796F" Foreground="#FF01796F">
+
+            <Canvas Margin="14,66,14,73">
+                <TextBlock Text="dishes"
+                           HorizontalAlignment="Left" VerticalAlignment="Top"
+                           Canvas.Left="88"
+                           FontFamily="Gothic" FontSize="13" FontStyle="Italic"
+                           Foreground="#FF016159"/>
+                
+                <ComboBox x:Name="list_dishPresets"
+                          Width="210" Height="25"
+                          HorizontalAlignment="Left" VerticalAlignment="Top"
+                          Canvas.Top="21"
+                          IsReadOnly="True"
+                          FontFamily="Gothic" FontSize="16"
+                          BorderBrush="#FFE3E9EF" Background="White" Foreground="#FF016159"/>
+
+                <TextBlock Text="alcohol types"
+                           HorizontalAlignment="Left" VerticalAlignment="Top"
+                           Canvas.Left="68" Canvas.Top="71"
+                           FontFamily="Gothic" FontSize="13" FontStyle="Italic"
+                           Foreground="#FF016159"/>
+
+                <ComboBox x:Name="list_typesPresets"
+                          Width="210" Height="25"
+                          HorizontalAlignment="Left" VerticalAlignment="Top"
+                          Canvas.Top="92"
+                          IsReadOnly="True"
+                          FontFamily="Gothic" FontSize="16"
+                          BorderBrush="#FFE3E9EF" Background="White" Foreground="#FF016159"/>
             </Canvas>
         </GroupBox>
-        <GroupBox Header="Results" HorizontalAlignment="Left" Height="135" Margin="55,350,0,0" VerticalAlignment="Top" Width="507" FontFamily="Century Gothic" FontSize="18" BorderBrush="#FFFF5F1F" Foreground="#FFFF5F1F">
+        
+        <GroupBox Header="Results"
+                  Width="507" Height="135"
+                  Margin="55,350,0,0"
+                  HorizontalAlignment="Left" VerticalAlignment="Top"
+                  FontFamily="Century Gothic" FontSize="18"
+                  BorderBrush="#FFFF5F1F" Foreground="#FFFF5F1F">
+            
             <Canvas Margin="61,25,61,26">
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="TOTAL VOLUME:" VerticalAlignment="Top" FontSize="16" FontFamily="Century Gothic" FontWeight="Bold" Foreground="#FFEC5800"/>
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="ALCOHOL VOLUME:" VerticalAlignment="Top" FontSize="16" FontFamily="Century Gothic" FontWeight="Bold" IsEnabled="False" Canvas.Top="35" Foreground="#FFEC5800"/>
-                <TextBlock x:Name="resTotalVolume" HorizontalAlignment="Left" TextWrapping="Wrap" Text="num" VerticalAlignment="Top" FontFamily="Gothic" FontSize="16" Canvas.Left="166" Canvas.Top="1" Foreground="#FFEC5800"/>
-                <TextBlock x:Name="resAlcoholVolume" HorizontalAlignment="Left" TextWrapping="Wrap" Text="num" VerticalAlignment="Top" FontFamily="Gothic" FontSize="16" Canvas.Left="166" Canvas.Top="36" Foreground="#FFEC5800"/>
-                <Button x:Name="bt_calculate" Style="{DynamicResource RoundCorner_Calculate}"  Content="Calculate" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" FontFamily="Century Gothic" Cursor="Hand" Height="55" FontSize="16" Canvas.Left="243" Foreground="#FFCB410B" FontWeight="Bold">
+                <TextBlock Text="TOTAL VOLUME:"
+                           HorizontalAlignment="Left" VerticalAlignment="Top"
+                           FontFamily="Century Gothic" FontSize="16" FontWeight="Bold" 
+                           Foreground="#FFEC5800"/>
+
+                <TextBlock Text="ALCOHOL VOLUME:"
+                           HorizontalAlignment="Left" VerticalAlignment="Top"
+                           Canvas.Top="35"
+                           IsEnabled="False"
+                           FontFamily="Century Gothic" FontSize="16" FontWeight="Bold"
+                           Foreground="#FFEC5800"/>
+                
+                <TextBlock x:Name="result_TotalVolume"
+                           HorizontalAlignment="Left" VerticalAlignment="Top"
+                           Canvas.Left="166" Canvas.Top="1"
+                           FontFamily="Gothic" FontSize="16"
+                           Foreground="#FFEC5800"/>
+                
+                <TextBlock x:Name="result_AlcoholVolume"
+                           HorizontalAlignment="Left" VerticalAlignment="Top"
+                           Canvas.Left="166" Canvas.Top="36"
+                           FontFamily="Gothic" FontSize="16"
+                           Foreground="#FFEC5800"/>
+
+                <Button x:Name="bt_calculate"
+                        Content="Calculate"
+                        Width="130" Height="55"
+                        HorizontalAlignment="Left" VerticalAlignment="Top"
+                        Canvas.Left="243"
+                        Click="bt_calculate_Click"
+                        Cursor="Hand"
+                        Style="{DynamicResource RoundCorner_Calculate}"
+                        FontFamily="Century Gothic" FontSize="16" FontWeight="Bold"
+                        Foreground="#FFCB410B">
+
                     <Button.Effect>
                         <DropShadowEffect Color="Gainsboro"/>
                     </Button.Effect>
@@ -44,10 +153,19 @@
                         </LinearGradientBrush>
                     </Button.Background>
                 </Button>
-
             </Canvas>
         </GroupBox>
-        <Button Style="{StaticResource RoundCorner_ClearAll}" Content="Clear all" HorizontalAlignment="Left" Margin="10,520,0,0" VerticalAlignment="Top" Width="85" Cursor="Hand" FontFamily="Gothic" FontSize="16" Height="30" FontStyle="Italic">
+
+        <Button x:Name="bt_clearAll"
+                Content="Clear all"
+                Width="85" Height="30"
+                Margin="10,520,0,0"
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                Click="bt_clearAll_Click"
+                Cursor="Hand"
+                Style="{StaticResource RoundCorner_ClearAll}"
+                FontFamily="Gothic" FontSize="16" FontStyle="Italic">
+
             <Button.Effect>
                 <DropShadowEffect Color="Gainsboro" Direction="250"/>
             </Button.Effect>
@@ -60,6 +178,5 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-
     </Grid>
 </Window>
