@@ -5,8 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:psw_po_lab3"
         mc:Ignorable="d"
-        Title="Lab3" Height="450" Width="800">
+        Title="The Percentage Calculator" Height="600" Width="630" ResizeMode="NoResize">
     <Grid>
-        
+        <GroupBox Header="Enter values yourself" HorizontalAlignment="Left" Height="285" Margin="55,30,0,0" VerticalAlignment="Top" Width="210" FontFamily="Century Gothic" FontSize="18">
+            <Canvas Margin="35,35,43,35">
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="dish size" VerticalAlignment="Top" FontSize="13" FontFamily="Gothic" FontStyle="Italic" Canvas.Left="36"/>
+                <TextBox HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Gothic" FontSize="16" Canvas.Top="21"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="spirit percentage" VerticalAlignment="Top" FontSize="13" FontFamily="Gothic" FontStyle="Italic" Canvas.Left="13" Canvas.Top="70"/>
+                <TextBox HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Gothic" FontSize="16" Canvas.Top="91"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="quantity" VerticalAlignment="Top" FontSize="13" FontFamily="Gothic" FontStyle="Italic" Canvas.Left="37" Canvas.Top="140"/>
+                <TextBox HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Gothic" FontSize="16" Canvas.Top="161"/>
+
+            </Canvas>
+        </GroupBox>
+        <GroupBox Header="Or choose from the lists" HorizontalAlignment="Left" Height="285" Margin="312,30,0,0" VerticalAlignment="Top" Width="250" FontFamily="Century Gothic" FontSize="18">
+            <Canvas Margin="18,73,19,78">
+                <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Background="White" BorderBrush="#FFE3E9EF" Height="25" FontSize="16" FontFamily="Gothic" Margin="0,0,20,0" IsEditable="True" Text="dishes" IsReadOnly="True"/>
+                <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Background="White" BorderBrush="#FFE3E9EF" Height="25" FontSize="16" FontFamily="Gothic" Canvas.Top="80" Margin="0,0,20,0" IsEditable="True" IsReadOnly="True" Text="types"/>
+
+            </Canvas>
+        </GroupBox>
+        <GroupBox Header="Results" HorizontalAlignment="Left" Height="135" Margin="55,350,0,0" VerticalAlignment="Top" Width="507" FontFamily="Century Gothic" FontSize="18">
+            <Canvas Margin="61,25,65,26">
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="TOTAL VOLUME:" VerticalAlignment="Top" FontSize="16" FontFamily="Century Gothic" FontWeight="Bold"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="ALCOHOL VOLUME:" VerticalAlignment="Top" FontSize="16" FontFamily="Century Gothic" FontWeight="Bold" IsEnabled="False" Canvas.Top="35"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="11" VerticalAlignment="Top" FontFamily="Gothic" FontSize="16" Canvas.Left="177" Canvas.Top="1"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="11" VerticalAlignment="Top" FontFamily="Gothic" FontSize="16" Canvas.Left="177" Canvas.Top="36"/>
+                <Button Content="Calculate" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" FontFamily="Century Gothic" Cursor="Hand" Height="55" FontSize="16" Canvas.Left="269"/>
+
+            </Canvas>
+        </GroupBox>
+        <Button Content="Clear all" HorizontalAlignment="Left" Margin="10,520,0,0" VerticalAlignment="Top" Width="85" Cursor="Hand" FontFamily="Gothic" FontSize="16" Height="30" FontStyle="Italic"/>
+
     </Grid>
 </Window>
