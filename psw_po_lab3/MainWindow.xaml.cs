@@ -35,6 +35,12 @@ namespace psw_po_lab3
             }
         }
 
+        private void bt_calculate_Click(object sender, RoutedEventArgs e)
+        {
+            result_TotalVolume.Text = Calculator.TotalVolume(Convert.ToDouble(tb_dishSize.Text), Convert.ToUInt32(tb_quantity.Text)).ToString();
+            result_AlcoholVolume.Text = Calculator.AlcoholVolume(Convert.ToDouble(tb_dishSize.Text), Convert.ToDouble(tb_alcoholPercentage.Text), Convert.ToUInt32(tb_quantity.Text)).ToString();
+        }
+
         private void PreviewValidation(object sender, TextCompositionEventArgs e)
         {
             Validation.DoubleValidation(e);
@@ -44,5 +50,7 @@ namespace psw_po_lab3
         {
             Validation.UintValidation(e);
         }
+
+        
     }
 }
