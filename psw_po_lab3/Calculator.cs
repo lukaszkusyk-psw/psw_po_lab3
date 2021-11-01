@@ -36,7 +36,7 @@ namespace psw_po_lab3
 
         public static double AlcoholVolume(double dishVolume, double alcoholPercentage, uint dishesCount)
         {
-            return dishVolume * alcoholPercentage * 0.01 * dishesCount;
+            return dishVolume * Clamp(0, 100, alcoholPercentage) * 0.01 * dishesCount;
         }
 
         public static double Clamp(double min, double max, double value)
