@@ -16,9 +16,9 @@
             BorderBrush="#FF4040FF" Foreground="#FF4040FF">
 
             <Canvas Margin="35,35,43,35">
-                <TextBlock Text="dish volume"
+                <TextBlock Text="dish size"
                            HorizontalAlignment="Left" VerticalAlignment="Top"
-                           Canvas.Left="26"
+                           Canvas.Left="36"
                            FontFamily="Gothic" FontSize="13" FontStyle="Italic"
                            Foreground="#FF120A8F"/>
 

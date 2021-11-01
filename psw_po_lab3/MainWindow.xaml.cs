@@ -37,8 +37,12 @@ namespace psw_po_lab3
 
         private void bt_calculate_Click(object sender, RoutedEventArgs e)
         {
-            result_TotalVolume.Text = Calculator.TotalVolume(Convert.ToDouble(tb_dishSize.Text), Convert.ToUInt32(tb_quantity.Text)).ToString();
-            result_AlcoholVolume.Text = Calculator.AlcoholVolume(Convert.ToDouble(tb_dishSize.Text), Convert.ToDouble(tb_alcoholPercentage.Text), Convert.ToUInt32(tb_quantity.Text)).ToString();
+            double dishSize = string.IsNullOrEmpty(tb_dishSize.Text) ? 0 : Convert.ToDouble(tb_dishSize.Text);
+            double alcoholPercentage = string.IsNullOrEmpty(tb_alcoholPercentage.Text) ? 0 : Convert.ToDouble(tb_alcoholPercentage.Text);
+            uint quantity = string.IsNullOrEmpty(tb_quantity.Text) ? 0 : Convert.ToUInt32(tb_quantity.Text);
+
+            result_TotalVolume.Text = Calculator.TotalVolume(dishSize, quantity) + " L";
+            result_AlcoholVolume.Text = Calculator.AlcoholVolume(dishSize, alcoholPercentage, quantity) + " L";
         }
 
         private void bt_clearAll_Click(object sender, RoutedEventArgs e)
@@ -46,6 +50,9 @@ namespace psw_po_lab3
             tb_dishSize.Clear();
             tb_alcoholPercentage.Clear();
             tb_quantity.Clear();
+
+            list_dishPresets.SelectedItem = null;
+            list_typesPresets.SelectedItem = null;
 
             result_TotalVolume.Text = "";
             result_AlcoholVolume.Text = "";
